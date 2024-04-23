@@ -1,7 +1,7 @@
 module FullyConnectedLayer (
     input clk,
     input reset,
-    input signed [7:0] weights [675:0][9:0];
+    input signed [7:0] weights [675:0][9:0],
     input signed [15:0] input_data [675:0], 
     output reg [31:0] output_data [9:0], 
     output reg fc_done

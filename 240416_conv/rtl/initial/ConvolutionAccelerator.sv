@@ -1,6 +1,6 @@
 module ConvolutionAccelerator (
     input [7:0] col_data [0:8*26*26-1], 
-    input [7:0] kernel [0:2*2-1], 
+    input [7:0] kernel [0:3*3-1],
     input [7:0] bias, 
     output reg [15:0] conv_result [0:26*26-1], 
     input clk,
@@ -26,4 +26,10 @@ module ConvolutionAccelerator (
         end
     end
 end
-  endmodule
+endmodule
+
+module PE (
+    input [7:0] col_data 
+);
+    
+endmodule
