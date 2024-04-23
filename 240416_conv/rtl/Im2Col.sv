@@ -1,8 +1,10 @@
 module Im2Col (
     input [7:0] image [27:0][27:0], 
-    output reg [7:0] col_data [0:8*26*26-1],      
+    output reg [7:0] col_data [0:9*26*26-1],      
     input clk,
-    input reset
+    input reset,
+    input vld_i,
+    output vld_o
 );
     reg [7:0] image_block [2:0][2:0]; 
     integer i, j, k, l, m, n;
